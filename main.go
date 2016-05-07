@@ -1,11 +1,16 @@
 package main
 
 import (
-    "fmt"
+	_ "github.com/zxteloiv/local-baike/docs"
+	_ "github.com/zxteloiv/local-baike/routers"
+
+	"github.com/astaxie/beego"
 )
 
 func main() {
-    s := make([]int, 0)
-    fmt.Println(s)
-    fmt.Println("hello world")
+	if beego.BConfig.RunMode == "dev" {
+		beego.BConfig.WebConfig.DirectoryIndex = true
+		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
+	}
+	beego.Run()
 }
