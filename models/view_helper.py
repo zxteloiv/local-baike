@@ -20,7 +20,7 @@ def build_path(viewid, subviewid=None):
     if data is None:
         return None
 
-    return os.path.join(config['crawled_data_path'], data, key)
+    return os.path.join(config['crawled_data_path'], data)
 
 def get_view_by_id(viewid):
     if viewid is None:

@@ -9,7 +9,7 @@ config = dict(
         db = 4
     ),
 
-    crawled_data_path = 'data/',
+    crawled_data_path = '/home/zxteloiv/datasets/baike-crawl',
 
     port = 23333
 )
